@@ -150,6 +150,7 @@
         <section class="block-about-us">
           <!-- Элемент `header` блока `block-about-us` -->
           <div class="block-about-us__header">
+            <!-- Блок `title` -->
             <h1 class="title">О РЕСТОРАНЕ</h1>
             <!-- Блок `icon-box` -->
             <div class="icon-box">
@@ -435,7 +436,8 @@
             </div>
             <!-- К блоку `form-box` примиксован элемент `form-box` блока `block-contact-us`-->
             <div class="form-box block-contact-us__form-box">
-              <form action="" method="get"> <!-- method="post" -->
+              <!-- method="post" -->
+              <form action="" method="get">
                 <!-- Элемент `input` блока `form-box` -->
                 <input class="form-box__input" type="text" name="name" placeholder="Ваше имя" required>
                 <!-- Элемент `input` блока `form-box` -->
@@ -450,9 +452,67 @@
         </section>
       </div>
     </div>
+    <!-- К блоку `page` примиксован модификатор `gray` блока `page` -->
+    <div class="page page_gray">
+      <!-- Блок `wrapper` -->
+      <div class="wrapper">
+        <!-- Блок `block-our-inst` -->
+        <section class="block-our-inst">
+          <!-- Элемент `wrap` блока `form-box` -->
+          <div class="block-our-inst__wrap">
+            <!-- Элемент `header` блока `form-box` -->
+            <div class="block-our-inst__header">
+              <!-- Блок `title` -->
+              <h1 class="title">НАШ INSTAGRAM</h1>
+              <!-- Блок `icon-box` -->
+              <div class="icon-box">
+                <img src="./assets/img/smPicture1.png" alt="Icon">
+              </div>
+              <!-- Блок `subtitle` -->
+              <span class="subtitle">летний дворец</span>
+            </div>
+            <!-- К блоку `block-carousel` примиксован элемент `block-carousel` блока `block-our-inst`-->
+            <div class="block-carousel block-our-inst__block-carousel">
+              <!-- Owl Carousel 2 HTML markup -->
+              <div id="inst-carousel" class="owl-carousel owl-theme">
+                <img src="./assets/img/picture1.webp" alt="Picture">
+                <img src="./assets/img/picture2.webp" alt="Picture">
+                <img src="./assets/img/picture3.webp" alt="Picture">
+                <img src="./assets/img/picture4.webp" alt="Picture">
+                <img src="./assets/img/picture5.webp" alt="Picture">
+              </div>
+              <!-- Элемент `control` блока `carousel` -->
+              <a class="carousel__control carousel__control_prev inst-carousel-control">
+                <span>&#10096;</span>
+              </a>
+              <a class="carousel__control carousel__control_next inst-carousel-control">
+                <span>&#10097;</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </main>
-  <footer>
-
+  <!-- Блок `footer` -->
+  <footer class="footer">
+    <!-- К блоку `wrapper` примиксован элемент `wrapper` блока `footer`-->
+    <div class="wrapper footer__wrapper">
+      <!-- Элемент `copyright` блока `footer` -->
+      <p class="footer__copyright">
+        Copyright (с) 2019 Ресторан “Летний дворец”
+      </p>
+      <!-- Элемент `social-networks` блока `footer` -->
+      <p class="footer__social-networks">
+        <a href="https://www.facebook.com/" target="_blank" rel="nofollow noopener">
+          Facebook
+        </a>
+        &#9866;
+        <a href="https://vk.com/" target="_blank" rel="nofollow noopener">Vkontakte</a>
+        &#9866;
+        <a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener">Instagram</a>
+      </p>
+    </div>
   </footer>
   <!-- Vendor scripts -->
   <script src="assets/libs/jquery/jquery-3.5.1.min.js"></script>

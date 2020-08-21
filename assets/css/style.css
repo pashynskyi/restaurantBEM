@@ -6,7 +6,7 @@ body {
   font-family: "Montserrat-Light";
 }
 
-/* Общиe стили для title */
+/* Общиe стили */
 
 .title {
   font-size: 30px;
@@ -38,6 +38,8 @@ body {
 .page_gray {
   background-color: #f9f7f7;
 }
+
+/* Стили для header */
 
 .header {
   /* background-color: #f9f7f7; */
@@ -523,4 +525,48 @@ body {
 
 .form-box__btn:active {
   box-shadow: none;
+}
+
+/* Стили для block-our-inst */
+
+.block-our-inst {
+  background-color: #f9f7f7;
+}
+
+.block-our-inst__wrap {
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+.block-our-inst__header {
+  text-align: center;
+}
+
+.block-our-inst__block-carousel {
+  margin-top: 80px;
+}
+
+.inst-carousel-control {
+  height: 100%;
+}
+
+/* Стили для footer */
+.footer__wrapper {
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__social-networks {
+  cursor: context-menu;
+}
+
+.footer__social-networks a {
+  color: #000;
+}
+
+.footer__social-networks a:hover {
+  color: #d1a954;
+  text-shadow: #fc0 1px 0 10px;
 }

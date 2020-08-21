@@ -1,6 +1,5 @@
 $(document).ready(function () {
-  //
-
+  // navigation active link
   $('.list__link').click(function () {
     $('.list__link').removeClass('list__link_active');
     $(this).toggleClass('list__link_active');
@@ -12,7 +11,7 @@ $(document).ready(function () {
     items: 3,
     loop: true,
     margin: 15,
-    // autoplay: true,
+    autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     responsive: {
@@ -24,6 +23,31 @@ $(document).ready(function () {
       },
       992: {
         items: 3
+      }
+    }
+  });
+
+  // 
+
+  $('#inst-carousel').owlCarousel({
+    items: 5,
+    dots: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4
+      },
+      1200: {
+        items: 5
       }
     }
   });
