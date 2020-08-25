@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(this).toggleClass('list__link_active');
   });
 
-  //
+  // main-carousel
 
   $('#main-carousel').owlCarousel({
     items: 3,
@@ -27,7 +27,7 @@ $(document).ready(function () {
     }
   });
 
-  // 
+  // inst-carousel
 
   $('#inst-carousel').owlCarousel({
     items: 5,
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
   //Отлавливаем события на стрелках котроля слайдами
 
-  var owl = $('.owl-carousel');
+  const owl = $('.owl-carousel');
   owl.owlCarousel();
   // Go to the previous item
   $('.carousel__control_prev').click(function () {
@@ -67,6 +67,28 @@ $(document).ready(function () {
     owl.trigger('next.owl.carousel');
   })
 });
+
+// header_sticky
+
+$(window).scroll((event) => scrollPage());
+
+const header = $('#myHeader');
+const sticky = header.offset();
+
+const carousel = $('#main-carousel');
+
+const scrollPage = () => {
+  if ($(window).scrollTop() > sticky.top) {
+    header.addClass("header_sticky");
+    carousel.addClass("block-carousel_margin-top");
+  } else {
+    header.removeClass("header_sticky");
+    carousel.removeClass("block-carousel_margin-top");
+  }
+}
+
+
+
 
 
 

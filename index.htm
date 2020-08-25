@@ -11,13 +11,15 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <!-- Main CSS styles -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
   <title>Restaurant(BEM)</title>
 </head>
 
 <body>
+  <div class="top-container"></div>
   <!-- Блок `header` -->
-  <header class="header">
+  <header class="header" id="myHeader">
     <!-- К блоку `wrapper` примиксован элемент `wrapper` блока `header`-->
     <div class="wrapper header__wrapper">
       <!-- Блок `logo-wrap` -->
@@ -70,10 +72,10 @@
     <div class="page">
       <!-- Блок `wrapper` -->
       <div class="wrapper">
-        <!-- Блок `carousel` -->
+        <!-- Блок `block-carousel` -->
         <section class="block-carousel">
           <!-- Owl Carousel 2 HTML markup -->
-          <div id="main-carousel" class="owl-carousel owl-theme">
+          <div id="main-carousel" class="owl-carousel owl-theme block-carousel_main">
             <!-- Блок `img-wrap` -->
             <div class="img-wrap">
               <img src="./assets/img/picture1.webp" alt="Picture">
@@ -83,51 +85,75 @@
                 <h3 class="img-wrap__title">КОРПОРАТИВЫ</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture2.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">СВАДЬБЫ</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture3.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">ЗВАНЫЕ ВЕЧЕРА</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture4.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">КОРПОРАТИВЫ</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture5.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">СВАДЬБЫ</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture1.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">ЗВАНЫЕ ВЕЧЕРА</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture2.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">КОРПОРАТИВЫ</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture3.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">СВАДЬБЫ</h3>
               </div>
             </div>
-            <div>
+            <!-- Блок `img-wrap` -->
+            <div class="img-wrap">
               <img src="./assets/img/picture4.webp" alt="Picture">
+              <!-- Элемент `text-box` блока `img-wrap` -->
               <div class="img-wrap__text-box">
+                <!-- Элемент `title` блока `img-wrap` -->
                 <h3 class="img-wrap__title">ЗВАНЫЕ ВЕЧЕРА</h3>
               </div>
             </div>
@@ -191,8 +217,8 @@
                 <div class="info-wrap block-about-us__info-wrap">
                   <!-- Элемент `header` блока `info-wrap` -->
                   <div class="info-wrap__header">
-                    <!-- Элемент `icon-box` имеет модификатор `size` со значением `sm` -->
-                    <div class="info-wrap__icon-box_size_sm">
+                    <!-- Элемент `icon-box` блока `info-wrap` -->
+                    <div class="info-wrap__icon-box ">
                       <img src="./assets/img/smPicture1.png" alt="Icon">
                     </div>
                     <!-- Элемент `title` блока `info-wrap` -->
@@ -209,8 +235,8 @@
                 <div class="info-wrap block-about-us__info-wrap">
                   <!-- Элемент `header` блока `info-wrap` -->
                   <div class="info-wrap__header">
-                    <!-- Элемент `icon-box` имеет модификатор `size` со значением `sm` -->
-                    <div class="info-wrap__icon-box_size_sm">
+                    <!-- Элемент `icon-box` блока `info-wrap` -->
+                    <div class="info-wrap__icon-box">
                       <img src="./assets/img/smPicture2.png" alt="Icon">
                     </div>
                     <!-- Элемент `title` блока `info-wrap` -->
@@ -227,8 +253,8 @@
                 <div class="info-wrap block-about-us__info-wrap">
                   <!-- Элемент `header` блока `info-wrap` -->
                   <div class="info-wrap__header">
-                    <!-- Элемент `icon-box` имеет модификатор `size` со значением `sm` -->
-                    <div class="info-wrap__icon-box_size_sm">
+                    <!-- Элемент `icon-box` блока `info-wrap` -->
+                    <div class="info-wrap__icon-box">
                       <img src="./assets/img/smPicture3.png" alt="Icon">
                     </div>
                     <!-- Элемент `title` блока `info-wrap` -->
@@ -245,8 +271,8 @@
                 <div class="info-wrap block-about-us__info-wrap">
                   <!-- Элемент `header` блока `info-wrap` -->
                   <div class="info-wrap__header">
-                    <!-- Элемент `icon-box` имеет модификатор `size` со значением `sm` -->
-                    <div class="info-wrap__icon-box_size_sm">
+                    <!-- Элемент `icon-box` блока `info-wrap` -->
+                    <div class="info-wrap__icon-box">
                       <img src="./assets/img/smPicture4.png" alt="Icon">
                     </div>
                     <!-- Элемент `title` блока `info-wrap` -->
@@ -269,14 +295,14 @@
     <div class="page">
       <!-- Блок `wrapper` -->
       <div class="wrapper">
-        <!-- Блок `block-galerry` -->
-        <section class="block-galerry">
-          <!-- Элемент `grid` блока `block-galerry` -->
-          <div class="block-galerry__grid">
+        <!-- Блок `block-gallery` -->
+        <section class="block-gallery">
+          <!-- Элемент `grid` блока `block-gallery` -->
+          <div class="block-gallery__grid">
             <!-- Блок `grid-area имеет модификатор `pos` со значением `1` -->
-            <div class="grid-ared grid-area_pos_1">
-              <!-- Элемент `title` блока `block-galerry` -->
-              <h2 class="block-galerry__title">ГАЛЕРЕЯ</h2>
+            <div class="grid-area grid-area_pos_1">
+              <!-- Элемент `title` блока `block-gallery` -->
+              <h2 class="block-gallery__title">ГАЛЕРЕЯ</h2>
               <!-- Блок `icon-box` -->
               <div class="icon-box">
                 <img src="./assets/img/smPicture1.png" alt="Icon">
@@ -285,23 +311,23 @@
               <span class="subtitle">летний дворец</span>
             </div>
             <!-- Блок `grid-area имеет модификатор `pos` со значением `2` -->
-            <div class="grid-ared grid-area_pos_2">
+            <div class="grid-area grid-area_pos_2">
               <img src="./assets/img/picture4.webp" alt="Picture">
             </div>
             <!-- Блок `grid-area имеет модификатор `pos` со значением `3` -->
-            <div class="grid-ared grid-area_pos_3">
+            <div class="grid-area grid-area_pos_3">
               <img src="./assets/img/picture2.webp" alt="Picture">
             </div>
             <!-- Блок `grid-area имеет модификатор `pos` со значением `4` -->
-            <div class="grid-ared grid-area_pos_4">
+            <div class="grid-area grid-area_pos_4">
               <img src="./assets/img/picture3.webp" alt="Picture">
             </div>
             <!-- Блок `grid-area имеет модификатор `pos` со значением `5` -->
-            <div class="grid-ared grid-area_pos_5">
+            <div class="grid-area grid-area_pos_5">
               <img src="./assets/img/picture5.webp" alt="Picture">
             </div>
             <!-- Блок `grid-area имеет модификатор `pos` со значением `6` -->
-            <div class="grid-ared grid-area_pos_6">
+            <div class="grid-area grid-area_pos_6">
               <img src="./assets/img/picture1.webp" alt="Picture">
             </div>
           </div>
@@ -322,6 +348,7 @@
             <div class="block-download__btn-wrap">
               <!-- Элемент `btn` блока `block-download` -->
               <a class="block-download__btn">СКАЧАТЬ ПЛАН</a>
+              <!-- Элемент `btn` блока `block-download` -->
               <a class="block-download__btn">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
             </div>
           </div>
@@ -508,9 +535,13 @@
           Facebook
         </a>
         &#9866;
-        <a href="https://vk.com/" target="_blank" rel="nofollow noopener">Vkontakte</a>
+        <a href="https://vk.com/" target="_blank" rel="nofollow noopener">
+          Vkontakte
+        </a>
         &#9866;
-        <a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener">Instagram</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener">
+          Instagram
+        </a>
       </p>
     </div>
   </footer>

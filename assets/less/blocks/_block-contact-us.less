@@ -1,0 +1,97 @@
+.block-contact-us {
+  /* background-color: aqua; */
+  .block-contact-us__wrapper {
+    margin-top: 100px;
+    padding: 0 50px;
+
+    display: flex;
+    justify-content: space-between;
+    .block-contact-us__info-box {
+      /* background-color: aquamarine; */
+      width: 51%;
+      .block-contact-us__header {
+        line-height: 1.35;
+        .block-contact-us__title {
+          margin-bottom: 20px;
+        }
+        .block-contact-us__subtitle {
+          color: #616161;
+        }
+      }
+      .block-contact-us__body {
+        /* background-color: whitesmoke; */
+        display: flex;
+        justify-content: space-between;
+        .block-contact-us__body-col {
+          background-color: #fff;
+          width: 48%;
+          margin-top: 40px;
+          .contact-us-body-title {
+            font-size: 18px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            /* text-align: center; */
+          }
+          .block-contact-us__list {
+            margin-top: 30px;
+            .block-contact-us__item {
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .icon-wrap {
+                font-size: 22px;
+                width: 15%;
+                color: #d1a954;
+                text-align: center;
+              }
+              .contact-us-body-text {
+                width: 80%;
+                line-height: 1.4;
+              }
+              .contact-us-body-text_underline {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    .block-contact-us__form-box {
+      /* background-color: aquamarine; */
+      width: 44%;
+      .form-box__input {
+        width: 100%;
+        border-bottom: 1px solid #d0d0d0;
+        padding: 10px 0;
+        margin-bottom: 30px;
+      }
+      .form-box__textarea {
+        width: 100%;
+        height: 180px;
+        resize: none;
+        border: 1px solid #d0d0d0;
+        margin-bottom: 30px;
+        padding: 10px 15px;
+      }
+      .form-box__btn {
+        width: 180px;
+        color: #fff;
+        background-color: #d1a954;
+        padding: 10px 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+        &:hover {
+          background-color: #fff;
+          color: #d1a954;
+          border: 1px solid #d1a954;
+          box-shadow: 0px 0px 10px 1px #d0d0d0;
+          transition: color 0.5s, border 0.5s, background-color 0.5s;
+        }
+        &:active {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
