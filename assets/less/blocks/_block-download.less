@@ -20,16 +20,16 @@
       .block-download__btn {
         color: #000;
         letter-spacing: 0.8px;
-        background-color: #fff;
+        background-color: @primaryBgColor;
         margin: 0 20px;
         padding: 15px;
-        border: 3px solid #d1a954;
+        border: 3px solid @primaryColor;
         cursor: pointer;
         &:hover {
           color: #fff;
-          background-color: #d1a954;
-          box-shadow: 0px 0px 10px 1px #fc0;
-          transition: background-color 0.5s, box-shadow 0.5s;
+          background-color: @primaryColor;
+          box-shadow: @primaryBoxShadow;
+          transition: background-color .5s, box-shadow .5s;
         }
       }
     }

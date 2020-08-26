@@ -19,18 +19,16 @@
         }
       }
       .block-contact-us__body {
-        /* background-color: whitesmoke; */
         display: flex;
         justify-content: space-between;
         .block-contact-us__body-col {
-          background-color: #fff;
+          background-color: @primaryBgColor;
           width: 48%;
           margin-top: 40px;
           .contact-us-body-title {
             font-size: 18px;
             letter-spacing: 0.8px;
             text-transform: uppercase;
-            /* text-align: center; */
           }
           .block-contact-us__list {
             margin-top: 30px;
@@ -42,7 +40,7 @@
               .icon-wrap {
                 font-size: 22px;
                 width: 15%;
-                color: #d1a954;
+                color: @primaryColor;
                 text-align: center;
               }
               .contact-us-body-text {
@@ -58,7 +56,6 @@
       }
     }
     .block-contact-us__form-box {
-      /* background-color: aquamarine; */
       width: 44%;
       .form-box__input {
         width: 100%;
@@ -77,16 +74,16 @@
       .form-box__btn {
         width: 180px;
         color: #fff;
-        background-color: #d1a954;
+        background-color: @primaryColor;
         padding: 10px 15px;
         font-size: 15px;
         text-transform: uppercase;
         &:hover {
-          background-color: #fff;
-          color: #d1a954;
-          border: 1px solid #d1a954;
-          box-shadow: 0px 0px 10px 1px #d0d0d0;
-          transition: color 0.5s, border 0.5s, background-color 0.5s;
+          background-color: @primaryBgColor;
+          color: @primaryColor;
+          border: 1px solid @primaryColor;
+          box-shadow: @primaryBoxShadow;
+          transition: color .5s, border .5s, background-color .5s;
         }
         &:active {
           box-shadow: none;
