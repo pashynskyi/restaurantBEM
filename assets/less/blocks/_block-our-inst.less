@@ -3,6 +3,11 @@
   .block-our-inst__wrap {
     margin-top: 100px;
     padding-top: 100px;
+    // Условие для экранов с шириной от 0 до @md(991px)
+    @media (max-width: @md) {
+      margin-top: 80px;
+      padding-top: 80px;
+    }
     .block-our-inst__header {
       text-align: center;
     }

@@ -1,14 +1,25 @@
 .block-contact-us {
-  /* background-color: aqua; */
   .block-contact-us__wrapper {
     margin-top: 100px;
     padding: 0 50px;
 
     display: flex;
     justify-content: space-between;
+    // Условие для экранов с шириной от 0 до 1045px
+    @media (max-width: 1045px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    // Условие для экранов с шириной от 0 до @md(991px)
+    @media (max-width: @md) {
+      margin-top: 80px;
+      padding: 0 40px;
+    }
     .block-contact-us__info-box {
-      /* background-color: aquamarine; */
-      width: 51%;
+      width: 60%;
+      @media (max-width: 1045px) {
+        width: 80%;
+      }
       .block-contact-us__header {
         line-height: 1.35;
         .block-contact-us__title {
@@ -25,6 +36,11 @@
           background-color: @primaryBgColor;
           width: 48%;
           margin-top: 40px;
+          // Условие для экранов с шириной от 0 до 1045px
+          @media (max-width: 1045px) {
+            width: 45%;
+            margin-top: 40px;
+          }
           .contact-us-body-title {
             font-size: 18px;
             letter-spacing: 0.8px;
@@ -36,10 +52,13 @@
               height: 60px;
               display: flex;
               align-items: center;
-              justify-content: space-between;
+              // Условие для экранов с шириной от 0 до 1045px
+              @media (max-width: 1045px) {
+                justify-content: space-between;
+              }
               .icon-wrap {
                 font-size: 22px;
-                width: 15%;
+                width: 60px;
                 color: @primaryColor;
                 text-align: center;
               }
@@ -55,8 +74,14 @@
         }
       }
     }
+    // form
     .block-contact-us__form-box {
-      width: 44%;
+      width: 35%;
+      // Условие для экранов с шириной от 0 до 1045px
+      @media (max-width: 1045px) {
+        width: 60%;
+        margin-top: 40px;
+      }
       .form-box__input {
         width: 100%;
         border-bottom: 1px solid #d0d0d0;
@@ -75,15 +100,19 @@
         width: 180px;
         color: #fff;
         background-color: @primaryColor;
+        border: 1px solid @primaryColor;
         padding: 10px 15px;
         font-size: 15px;
         text-transform: uppercase;
+        @media (max-width: 1045px) {
+          margin: 0 auto;
+          display: block;
+        }
         &:hover {
           background-color: @primaryBgColor;
           color: @primaryColor;
-          border: 1px solid @primaryColor;
           box-shadow: @primaryBoxShadow;
-          transition: color .5s, border .5s, background-color .5s;
+          transition: color 0.5s, border 0.5s, background-color 0.5s;
         }
         &:active {
           box-shadow: none;

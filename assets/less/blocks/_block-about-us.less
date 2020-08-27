@@ -22,6 +22,10 @@
       top: -300px;
       right: 0;
       left: 0;
+      // Условие для экранов с шириной от 0 до @md(991px)
+      @media (max-width: @md) {
+        width: 70%;
+      }
       & img {
         width: 100%;
         max-width: 100%;
@@ -33,6 +37,10 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      // Условие для экранов с шириной от 0 до @md(991px)
+      @media (max-width: @md) {
+        flex-direction: column;
+      }
       .block-about-us__col {
         display: flex;
         height: 100%;
@@ -43,6 +51,10 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        // Условие для экранов с шириной от 0 до @md(991px)
+        @media (max-width: @md) {
+          width: 80%;
+        }
         .block-about-us__icon-box_size_big {
           width: 200px;
           margin-bottom: 30px;
@@ -58,10 +70,18 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        // Условие для экранов с шириной от 0 до @md(991px)
+        @media (max-width: @md) {
+          width: 80%;
+        }
         .block-about-us__info-wrap {
           width: 48%;
           height: 200px;
           margin: 15px 0;
+          // Условие для экранов с шириной от 0 до @md(991px)
+          @media (max-width: @md) {
+            width: 45%;
+          }
           .info-wrap__header {
             height: 40px;
             display: flex;
@@ -88,4 +108,3 @@
     }
   }
 }
-

@@ -17,8 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // Условие для экранов с шириной от 0 до 991px
-    @media (max-width: 991px) {
+    // Условие для экранов с шириной от 0 до @md(991px)
+    @media (max-width: @md) {
     }
     .logo-wrap {
       position: relative;
@@ -41,8 +41,8 @@
     .header__burger {
       display: none;
       cursor: pointer;
-      // Условие для экранов с шириной от 0 до 991px
-      @media (max-width: 991px) {
+      // Условие для экранов с шириной от 0 до @md(991px)
+      @media (max-width: @md) {
         display: block;
         position: absolute;
         right: 30px;
@@ -103,8 +103,8 @@
       display: flex;
       align-items: center;
       text-transform: uppercase;
-      // Условие для экранов с шириной от 0 до 991px
-      @media (max-width: 991px) {
+      // Условие для экранов с шириной от 0 до @md(991px)
+      @media (max-width: @md) {
         position: fixed;
         top: -100%;
         left: 0;
@@ -122,9 +122,9 @@
       }
       .list__item {
         margin: 0px 10px;
-        // Условие для экранов с шириной от 0 до 991px
-        @media (max-width: 991px) {
-          margin: 20px 10px;
+        // Условие для экранов с шириной от 0 до @md(991px)
+        @media (max-width: @md) {
+          margin: 20px 0px;
         }
         &:last-child {
           margin-right: 0;
@@ -133,8 +133,8 @@
           border: 1px solid @primaryColor;
           padding: 10px;
           color: @primaryColor;
-          // Условие для экранов с шириной от 0 до 991px
-          @media (max-width: 991px) {
+          // Условие для экранов с шириной от 0 до @md(991px)
+          @media (max-width: @md) {
             border: none;
             padding: 0;
             color: #000;
@@ -148,8 +148,8 @@
           background-color: @primaryColor;
           box-shadow: @primaryBoxShadow;
           transition: background-color 0.5s, box-shadow 0.5s;
-          // Условие для экранов с шириной от 0 до 991px
-          @media (max-width: 991px) {
+          // Условие для экранов с шириной от 0 до @md(991px)
+          @media (max-width: @md) {
             color: @primaryColor;
             box-shadow: none;
             transition: none;
@@ -162,8 +162,8 @@
           display: block;
           height: 100%;
           width: 100%;
-          // Условие для экранов с шириной от 0 до 991px
-          @media (max-width: 991px) {
+          // Условие для экранов с шириной от 0 до @md(991px)
+          @media (max-width: @md) {
             font-size: 15px;
           }
           .hover-text-mixin;
@@ -172,23 +172,22 @@
           font-family: @fontBold;
           font-size: 15px;
           color: @primaryColor;
-          // Условие для экранов с шириной от 0 до 991px
-          @media (max-width: 991px) {
+          // Условие для экранов с шириной от 0 до @md(991px)
+          @media (max-width: @md) {
             font-size: 17px;
           }
         }
       }
     }
   }
-}
-
-.header_sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50;
-  background-color: @primaryBgColor;
-  box-shadow: 0px 0px 5px 1px #000;
-  transition: all 0.5s;
+  &.header_sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: @primaryBgColor;
+    box-shadow: 0px 0px 5px 1px #000;
+    transition: all 0.5s;
+  }
 }

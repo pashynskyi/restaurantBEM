@@ -79,6 +79,7 @@ const sticky = header.offset();
 const carousel = $('#main-carousel');
 
 const scrollPage = () => {
+  // console.log('scrollTop: ' + $(window).scrollTop() + ' > ' + 'Sticky-top: ' + sticky.top );
   if ($(window).scrollTop() > sticky.top) {
     header.addClass('header_sticky');
     carousel.addClass('block-carousel_margin-top');
