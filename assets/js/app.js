@@ -1,7 +1,8 @@
 $(document).ready(function () {
   // navigation active link
-  $('.list__link').click(function () {
-    $('.list__link').removeClass('list__link_active');
+  const listLink = $('.list__link');
+  listLink.click(function () {
+    listLink.removeClass('list__link_active');
     $(this).toggleClass('list__link_active');
   });
 
@@ -79,14 +80,27 @@ const carousel = $('#main-carousel');
 
 const scrollPage = () => {
   if ($(window).scrollTop() > sticky.top) {
-    header.addClass("header_sticky");
-    carousel.addClass("block-carousel_margin-top");
+    header.addClass('header_sticky');
+    carousel.addClass('block-carousel_margin-top');
   } else {
-    header.removeClass("header_sticky");
-    carousel.removeClass("block-carousel_margin-top");
+    header.removeClass('header_sticky');
+    carousel.removeClass('block-carousel_margin-top');
   }
 }
 
+// header__burger toggle state
+
+const headerBurger = $('#headerBurger');
+const navList = $('#navList');
+const myLogo = $('#myLogo');
+const body = $('body');
+
+headerBurger.click(function () {
+  headerBurger.toggleClass('header__burger_active');
+  navList.toggleClass('list_active');
+  myLogo.toggleClass('logo-wrap_active');
+  body.toggleClass('lock');
+})
 
 
 

@@ -1,5 +1,11 @@
 body {
   font-family: @fontLight;
+  // Условие для экранов с шириной от 0 до 991px
+  @media (max-width: 991px) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
 }
 
 /* Общиe стили */

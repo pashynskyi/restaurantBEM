@@ -1,4 +1,15 @@
 .header {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: aquamarine;
+    z-index: 3;
+  }
   .header__wrapper {
     max-width: 1170px;
     width: 100%;
@@ -6,31 +17,144 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // Условие для экранов с шириной от 0 до 991px
+    @media (max-width: 991px) {
+    }
     .logo-wrap {
+      position: relative;
+      z-index: 4;
       flex: 0 0 160px;
       height: 87px;
+      left: 0;
+      transition: all 0.4s ease 0s;
       .logo-wrap__logo {
         max-width: 100%;
         width: 100%;
       }
+      //Стили для logo-wrap в активном состоянии
+      &.logo-wrap_active {
+        left: calc(~"50% - 80px");
+        transition: all 0.4s ease 0s;
+      }
+    }
+    // header__burger
+    .header__burger {
+      display: none;
+      cursor: pointer;
+      // Условие для экранов с шириной от 0 до 991px
+      @media (max-width: 991px) {
+        display: block;
+        position: absolute;
+        right: 30px;
+        width: 30px;
+        height: 20px;
+        z-index: 4;
+        & span {
+          background-color: #000;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          top: 9px;
+        }
+        &:before,
+        &:after {
+          content: "";
+          background-color: #000;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+        }
+        &:before {
+          top: 0;
+          transition: transform 0.2s ease-in, background-color 0.3s linear,
+            top 0.2s linear 0.2s;
+        }
+        &:after {
+          bottom: 0;
+          transition: transform 0.2s ease-in, background-color 0.3s linear,
+            bottom 0.2s linear 0.2s;
+        }
+      }
+      //Стили для header__burger в активном состоянии
+      &.header__burger_active span {
+        background-color: transparent;
+      }
+      &.header__burger_active:before {
+        background-color: red;
+        transform: rotate(45deg);
+        top: 9px;
+        transition: top 0.2s linear, background-color 0.3s linear,
+          transform 0.2s ease-in 0.2s;
+      }
+      &.header__burger_active:after {
+        background-color: red;
+        transform: rotate(-45deg);
+        bottom: 9px;
+        transition: bottom 0.2s linear, background-color 0.3s linear,
+          transform 0.2s ease-in 0.2s;
+      }
     }
     // Стили для навигации
     .list {
+      position: relative;
+      z-index: 3;
       display: flex;
       align-items: center;
       text-transform: uppercase;
+      // Условие для экранов с шириной от 0 до 991px
+      @media (max-width: 991px) {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+
+        display: block;
+        padding: 200px 25px 0 25px;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        &.list_active {
+          top: 0;
+        }
+      }
       .list__item {
         margin: 0px 10px;
+        // Условие для экранов с шириной от 0 до 991px
+        @media (max-width: 991px) {
+          margin: 20px 10px;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
         &:first-child .list__link {
           border: 1px solid @primaryColor;
           padding: 10px;
           color: @primaryColor;
+          // Условие для экранов с шириной от 0 до 991px
+          @media (max-width: 991px) {
+            border: none;
+            padding: 0;
+            color: #000;
+            &.list__link_active {
+              color: @primaryColor;
+            }
+          }
         }
         &:first-child:hover .list__link {
           color: #fff;
           background-color: @primaryColor;
           box-shadow: @primaryBoxShadow;
-          transition: background-color .5s, box-shadow .5s;
+          transition: background-color 0.5s, box-shadow 0.5s;
+          // Условие для экранов с шириной от 0 до 991px
+          @media (max-width: 991px) {
+            color: @primaryColor;
+            box-shadow: none;
+            transition: none;
+            background-color: inherit;
+          }
         }
         .list__link {
           font-size: 13px;
@@ -38,12 +162,20 @@
           display: block;
           height: 100%;
           width: 100%;
-          .hover-text-mixin
+          // Условие для экранов с шириной от 0 до 991px
+          @media (max-width: 991px) {
+            font-size: 15px;
+          }
+          .hover-text-mixin;
         }
         .list__link_active {
           font-family: @fontBold;
           font-size: 15px;
           color: @primaryColor;
+          // Условие для экранов с шириной от 0 до 991px
+          @media (max-width: 991px) {
+            font-size: 17px;
+          }
         }
       }
     }
@@ -53,12 +185,10 @@
 .header_sticky {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 50;
   background-color: @primaryBgColor;
   box-shadow: 0px 0px 5px 1px #000;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-
-
-

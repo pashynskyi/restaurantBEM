@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <!-- OwlCarousel CSS styles -->
   <link rel="stylesheet" href="./assets/libs/owlCarousel2/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="./assets/libs/owlCarousel2/assets/owl.theme.default.css">
@@ -13,7 +13,7 @@
   <!-- Main CSS styles -->
   <link rel="stylesheet" href="./assets/css/main.css">
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-  <title>Restaurant(BEM)</title>
+  <title>Restaurant(BEM-LESS)</title>
 </head>
 
 <body>
@@ -23,14 +23,18 @@
     <!-- К блоку `wrapper` примиксован элемент `wrapper` блока `header`-->
     <div class="wrapper header__wrapper">
       <!-- Блок `logo-wrap` -->
-      <div class="logo-wrap">
+      <div class="logo-wrap" id="myLogo">
         <!-- Элемент `logo` блока `logo-wrap` -->
         <img class="logo-wrap__logo" src="assets/img/logo.png" alt="logo">
+      </div>
+      <!-- Элемент `burger` блока `header` -->
+      <div class="header__burger" id="headerBurger">
+        <span></span>
       </div>
       <!-- Блок `nav` -->
       <nav class="nav">
         <!-- Блок `list` -->
-        <ul class="list">
+        <ul class="list" id="navList">
           <!-- Элемент `item` блока `list` -->
           <li class="list__item">
             <!-- Элемент `link` блока `list` -->
