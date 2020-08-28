@@ -7,7 +7,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: aquamarine;
     z-index: 3;
   }
   .header__wrapper {
@@ -17,8 +16,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // Условие для экранов с шириной от 0 до @md(991px)
-    @media (max-width: @md) {
+    // Условие для экранов с шириной от 0 до @sm(767px)
+    @media (max-width: @sm) {
+      padding: 5px 30px;
     }
     .logo-wrap {
       position: relative;
@@ -27,14 +27,24 @@
       height: 87px;
       left: 0;
       transition: all 0.4s ease 0s;
+      // Условие для экранов с шириной от 0 до @sm(767px)
+      @media (max-width: @sm) {
+        flex: 0 0 130px;
+        display: flex;
+      }
       .logo-wrap__logo {
         max-width: 100%;
         width: 100%;
+        align-self: center;
       }
       //Стили для logo-wrap в активном состоянии
       &.logo-wrap_active {
         left: calc(~"50% - 80px");
         transition: all 0.4s ease 0s;
+        // Условие для экранов с шириной от 0 до @sm(767px)
+        @media (max-width: @sm) {
+          left: calc(~"50% - 65px");
+        }
       }
     }
     // header__burger
@@ -184,8 +194,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+
     z-index: 50;
+    width: 100%;
     background-color: @primaryBgColor;
     box-shadow: 0px 0px 5px 1px #000;
     transition: all 0.5s;

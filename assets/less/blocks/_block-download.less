@@ -12,6 +12,11 @@
     @media (max-width: @md) {
       margin-top: 80px;
     }
+    // Условие для экранов с шириной от 0 до @sm(767px)
+    @media (max-width: @sm) {
+      margin-top: 60px;
+      height: 280px;
+    }
     .block-download__title {
       color: #fff;
       text-shadow: #000 1px 0 10px;
@@ -20,7 +25,12 @@
     .block-download__btn-wrap {
       display: flex;
       justify-content: center;
+      // Условие для экранов с шириной от 0 до 500px
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
       .block-download__btn {
+        font-size: 14px;
         color: #000;
         letter-spacing: 0.8px;
         background-color: @primaryBgColor;
@@ -28,6 +38,18 @@
         padding: 15px;
         border: 3px solid @primaryColor;
         cursor: pointer;
+        // Условие для экранов с шириной от 0 до @sm(767px)
+        @media (max-width: @sm) {
+          padding: 13px;
+          font-size: 13px;
+        }
+        // Условие для экранов с шириной от 0 до 500px
+        @media (max-width: 500px) {
+          padding: 10px;
+          font-size: 12px;
+          margin: 10px 0;
+          text-align: center;
+        }
         &:hover {
           color: #fff;
           background-color: @primaryColor;

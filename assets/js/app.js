@@ -67,41 +67,51 @@ $(document).ready(function () {
   $('.carousel__control_next').click(function () {
     owl.trigger('next.owl.carousel');
   })
+  // autoplayHoverPause: true
+  $('.carousel__control').hover(function () {
+    owl.trigger('stop.owl.autoplay');
+  })
+  // autoplayHoverPause: false
+  $('.carousel__control').mouseout(function () {
+    owl.trigger('play.owl.autoplay');
+  })
+
+  // header_sticky
+
+  $(window).scroll((event) => scrollPage());
+
+  const header = $('#myHeader');
+  const sticky = header.offset();
+
+  const carousel = $('#main-carousel');
+
+  const scrollPage = () => {
+    if ($(window).scrollTop() > sticky.top) {
+      header.addClass('header_sticky');
+      carousel.addClass('block-carousel_margin-top');
+    } else {
+      header.removeClass('header_sticky');
+      carousel.removeClass('block-carousel_margin-top');
+    }
+  }
+
+  // header__burger toggle state
+
+  const headerBurger = $('#headerBurger');
+  const navList = $('#navList');
+  const myLogo = $('#myLogo');
+  const body = $('body');
+
+  headerBurger.click(function () {
+    headerBurger.toggleClass('header__burger_active');
+    navList.toggleClass('list_active');
+    myLogo.toggleClass('logo-wrap_active');
+    body.toggleClass('lock');
+  })
+
 });
 
-// header_sticky
 
-$(window).scroll((event) => scrollPage());
-
-const header = $('#myHeader');
-const sticky = header.offset();
-
-const carousel = $('#main-carousel');
-
-const scrollPage = () => {
-  // console.log('scrollTop: ' + $(window).scrollTop() + ' > ' + 'Sticky-top: ' + sticky.top );
-  if ($(window).scrollTop() > sticky.top) {
-    header.addClass('header_sticky');
-    carousel.addClass('block-carousel_margin-top');
-  } else {
-    header.removeClass('header_sticky');
-    carousel.removeClass('block-carousel_margin-top');
-  }
-}
-
-// header__burger toggle state
-
-const headerBurger = $('#headerBurger');
-const navList = $('#navList');
-const myLogo = $('#myLogo');
-const body = $('body');
-
-headerBurger.click(function () {
-  headerBurger.toggleClass('header__burger_active');
-  navList.toggleClass('list_active');
-  myLogo.toggleClass('logo-wrap_active');
-  body.toggleClass('lock');
-})
 
 
 

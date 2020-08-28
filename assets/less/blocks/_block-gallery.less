@@ -16,6 +16,11 @@
       padding: 0 40px;
       margin-top: 80px;
     }
+    // Условие для экранов с шириной от 0 до @sm(767px)
+    @media (max-width: @sm) {
+      padding: 0 30px;
+      margin-top: 60px;
+    }
     .grid-area {
       & img {
         width: 100%;
@@ -33,6 +38,14 @@
           font-size: 30px;
           letter-spacing: 1.8px;
           color: #222222;
+        }
+        // Условие для экранов с шириной от 0 до @md(767px)
+        @media (max-width: @sm) {
+          font-size: 24px;
+        }
+        // Условие для экранов с шириной от 0 до 400px
+        @media (max-width: 400px) {
+          font-size: 19px;
         }
       }
     }
@@ -52,6 +65,10 @@
       @media (max-width: @md) {
         grid-area: ~"2 / 1 / 3 / 7";
       }
+      // Условие для экранов с шириной от 0 до @md(767px)
+      @media (max-width: @sm) {
+        grid-area: ~"2 / 1 / 3 / 13";
+      }
     }
 
     .grid-area_pos_3 {
@@ -59,6 +76,10 @@
       // Условие для экранов с шириной от 0 до @md(991px)
       @media (max-width: @md) {
         grid-area: ~"2 / 7 / 3 / 13";
+      }
+      // Условие для экранов с шириной от 0 до @md(767px)
+      @media (max-width: @sm) {
+        grid-area: ~"3 / 1 / 3 / 13";
       }
     }
 
@@ -68,6 +89,10 @@
       @media (max-width: @md) {
         grid-area: ~"3 / 1 / 5 / 13";
       }
+      // Условие для экранов с шириной от 0 до @md(767px)
+      @media (max-width: @sm) {
+        grid-area: ~"4 / 1 / 5 / 13";
+      }
     }
 
     .grid-area_pos_5 {
@@ -75,6 +100,10 @@
       // Условие для экранов с шириной от 0 до @md(991px)
       @media (max-width: @md) {
         grid-area: ~"5 / 1 / 7 / 7";
+      }
+      // Условие для экранов с шириной от 0 до @md(767px)
+      @media (max-width: @sm) {
+        grid-area: ~"5 / 1 / 6 / 13";
       }
     }
 
@@ -84,33 +113,10 @@
       @media (max-width: @md) {
         grid-area: ~"5 / 7 / 7 / 13";
       }
+      // Условие для экранов с шириной от 0 до @md(767px)
+      @media (max-width: @sm) {
+        grid-area: ~"6 / 1 / 7 / 13";
+      }
     }
   }
 }
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!
-
-// .grid-area_pos_1 {
-//   grid-area: ~"1 / 1 / 1 / 13";
-//   align-self: center;
-// }
-
-// .grid-area_pos_2 {
-//   grid-area: ~"2 / 1 / 3 / 7";
-// }
-
-// .grid-area_pos_3 {
-//   grid-area: ~"2 / 7 / 3 / 13";
-// }
-
-// .grid-area_pos_4 {
-//   grid-area: ~"3 / 1 / 5 / 13";
-// }
-
-// .grid-area_pos_5 {
-//   grid-area: ~"5 / 1 / 7 / 7";
-// }
-
-// .grid-area_pos_6 {
-//   grid-area: ~"5 / 7 / 7 / 13";
-// }

@@ -15,10 +15,20 @@
       margin-top: 80px;
       padding: 0 40px;
     }
+    // Условие для экранов с шириной от 0 до @sm(767px)
+    @media (max-width: @sm) {
+      margin-top: 60px;
+      padding: 0 30px;
+    }
     .block-contact-us__info-box {
       width: 60%;
+      // Условие для экранов с шириной от 0 до 1045px
       @media (max-width: 1045px) {
         width: 80%;
+      }
+      // Условие для экранов с шириной от 0 до @sm(767px)
+      @media (max-width: @sm) {
+        width: 100%;
       }
       .block-contact-us__header {
         line-height: 1.35;
@@ -32,6 +42,10 @@
       .block-contact-us__body {
         display: flex;
         justify-content: space-between;
+        // Условие для экранов с шириной от 0 до @sm(767px)
+        @media (max-width: @sm) {
+          flex-direction: column;
+        }
         .block-contact-us__body-col {
           background-color: @primaryBgColor;
           width: 48%;
@@ -41,6 +55,11 @@
             width: 45%;
             margin-top: 40px;
           }
+          // Условие для экранов с шириной от 0 до @sm(767px)
+          @media (max-width: @sm) {
+            width: 100%;
+            margin-top: 30px;
+          }
           .contact-us-body-title {
             font-size: 18px;
             letter-spacing: 0.8px;
@@ -48,13 +67,23 @@
           }
           .block-contact-us__list {
             margin-top: 30px;
+            // Условие для экранов с шириной от 0 до @sm(767px)
+            @media (max-width: @sm) {
+              margin-top: 20px;
+            }
             .block-contact-us__item {
               height: 60px;
+              
               display: flex;
               align-items: center;
               // Условие для экранов с шириной от 0 до 1045px
               @media (max-width: 1045px) {
                 justify-content: space-between;
+              }
+              // Условие для экранов с шириной от 0 до @sm(767px)
+              @media (max-width: @sm) {
+                height: 50px;
+                justify-content: flex-start;
               }
               .icon-wrap {
                 font-size: 22px;
@@ -82,6 +111,19 @@
         width: 60%;
         margin-top: 40px;
       }
+      // Условие для экранов с шириной от 0 до @sm(767px)
+      @media (max-width: @sm) {
+        width: 70%;
+        margin-top: 30px;
+      }
+      // Условие для экранов с шириной от 0 до 650px
+      @media (max-width: 650px) {
+        width: 90%;
+      }
+      // Условие для экранов с шириной от 0 до 500px
+      @media (max-width: 500px) {
+        width: 100%;
+      }
       .form-box__input {
         width: 100%;
         border-bottom: 1px solid #d0d0d0;
@@ -104,6 +146,7 @@
         padding: 10px 15px;
         font-size: 15px;
         text-transform: uppercase;
+        // Условие для экранов с шириной от 0 до 1045px
         @media (max-width: 1045px) {
           margin: 0 auto;
           display: block;

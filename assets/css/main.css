@@ -135,7 +135,19 @@ body {
   color: #222222;
   text-transform: uppercase;
 }
-/* line 41, E:\projects\restaurant(BEM)\assets\less\_general.less */
+@media (max-width: 767px) {
+  /* line 40, E:\projects\restaurant(BEM)\assets\less\_general.less */
+  .title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 400px) {
+  /* line 44, E:\projects\restaurant(BEM)\assets\less\_general.less */
+  .title {
+    font-size: 19px;
+  }
+}
+/* line 49, E:\projects\restaurant(BEM)\assets\less\_general.less */
 .subtitle {
   font-size: 11px;
   color: #000;
@@ -143,13 +155,19 @@ body {
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
-/* line 49, E:\projects\restaurant(BEM)\assets\less\_general.less */
+@media (max-width: 400px) {
+  /* line 56, E:\projects\restaurant(BEM)\assets\less\_general.less */
+  .subtitle {
+    font-size: 10px;
+  }
+}
+/* line 61, E:\projects\restaurant(BEM)\assets\less\_general.less */
 .icon-box {
   width: 46px;
   height: 30px;
   margin: 20px auto 10px auto;
 }
-/* line 55, E:\projects\restaurant(BEM)\assets\less\_general.less */
+/* line 67, E:\projects\restaurant(BEM)\assets\less\_general.less */
 .icon-box img {
   width: 100%;
   max-width: 100%;
@@ -168,7 +186,7 @@ body {
   height: 100%;
   z-index: 3;
 }
-/* line 13, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 12, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper {
   max-width: 1170px;
   width: 100%;
@@ -183,6 +201,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 767px) {
+  /* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  .header .header__wrapper {
+    padding: 5px 30px;
+  }
+}
 /* line 23, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .logo-wrap {
   position: relative;
@@ -195,24 +219,43 @@ body {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
-/* line 30, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+@media (max-width: 767px) {
+  /* line 31, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  .header .header__wrapper .logo-wrap {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 130px;
+            flex: 0 0 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/* line 35, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .logo-wrap .logo-wrap__logo {
   max-width: 100%;
   width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
-/* line 35, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 41, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .logo-wrap.logo-wrap_active {
   left: calc(50% - 80px);
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
-/* line 41, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+@media (max-width: 767px) {
+  /* line 45, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  .header .header__wrapper .logo-wrap.logo-wrap_active {
+    left: calc(50% - 65px);
+  }
+}
+/* line 51, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger {
   display: none;
   cursor: pointer;
 }
 @media (max-width: 991px) {
-  /* line 45, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 55, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger {
     display: block;
     position: absolute;
@@ -221,7 +264,7 @@ body {
     height: 20px;
     z-index: 4;
   }
-  /* line 52, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 62, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger span {
     background-color: #000;
     position: absolute;
@@ -230,7 +273,7 @@ body {
     height: 2px;
     top: 9px;
   }
-  /* line 60, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 70, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger:before,
   .header .header__wrapper .header__burger:after {
     content: "";
@@ -240,7 +283,7 @@ body {
     height: 2px;
     left: 0;
   }
-  /* line 69, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 79, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger:before {
     top: 0;
     -webkit-transition: background-color 0.3s linear, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
@@ -248,7 +291,7 @@ body {
     transition: transform 0.2s ease-in, background-color 0.3s linear, top 0.2s linear 0.2s;
     transition: transform 0.2s ease-in, background-color 0.3s linear, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
   }
-  /* line 74, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 84, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger:after {
     bottom: 0;
     -webkit-transition: background-color 0.3s linear, bottom 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
@@ -257,11 +300,11 @@ body {
     transition: transform 0.2s ease-in, background-color 0.3s linear, bottom 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
   }
 }
-/* line 81, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 91, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger.header__burger_active span {
   background-color: transparent;
 }
-/* line 84, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 94, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger.header__burger_active:before {
   background-color: red;
   -webkit-transform: rotate(45deg);
@@ -272,7 +315,7 @@ body {
   transition: top 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s;
   transition: top 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
-/* line 91, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 101, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger.header__burger_active:after {
   background-color: red;
   -webkit-transform: rotate(-45deg);
@@ -283,7 +326,7 @@ body {
   transition: bottom 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s;
   transition: bottom 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
-/* line 100, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 110, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list {
   position: relative;
   z-index: 3;
@@ -296,7 +339,7 @@ body {
   text-transform: uppercase;
 }
 @media (max-width: 991px) {
-  /* line 107, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 117, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list {
     position: fixed;
     top: -100%;
@@ -310,44 +353,44 @@ body {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
-  /* line 119, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 129, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list.list_active {
     top: 0;
   }
 }
-/* line 123, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 133, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item {
   margin: 0px 10px;
 }
 @media (max-width: 991px) {
-  /* line 126, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 136, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item {
     margin: 20px 0px;
   }
 }
-/* line 129, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 139, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item:last-child {
   margin-right: 0;
 }
-/* line 132, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 142, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item:first-child .list__link {
   border: 1px solid #d1a954;
   padding: 10px;
   color: #d1a954;
 }
 @media (max-width: 991px) {
-  /* line 137, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 147, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item:first-child .list__link {
     border: none;
     padding: 0;
     color: #000;
   }
-  /* line 141, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 151, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item:first-child .list__link.list__link_active {
     color: #d1a954;
   }
 }
-/* line 146, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 156, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item:first-child:hover .list__link {
   color: #fff;
   background-color: #d1a954;
@@ -359,7 +402,7 @@ body {
   transition: background-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 @media (max-width: 991px) {
-  /* line 152, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 162, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item:first-child:hover .list__link {
     color: #d1a954;
     -webkit-box-shadow: none;
@@ -369,7 +412,7 @@ body {
     background-color: inherit;
   }
 }
-/* line 159, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 169, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item .list__link {
   font-size: 13px;
   color: #000;
@@ -378,7 +421,7 @@ body {
   width: 100%;
 }
 @media (max-width: 991px) {
-  /* line 166, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 176, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item .list__link {
     font-size: 15px;
   }
@@ -388,25 +431,25 @@ body {
   color: #d1a954;
   text-shadow: #ffcc00 1px 0 10px;
 }
-/* line 171, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 181, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item .list__link_active {
   font-family: "Montserrat-Bold";
   font-size: 15px;
   color: #d1a954;
 }
 @media (max-width: 991px) {
-  /* line 176, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 186, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item .list__link_active {
     font-size: 17px;
   }
 }
-/* line 183, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 193, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header.header_sticky {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 50;
+  width: 100%;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 0px 5px 1px #000;
           box-shadow: 0px 0px 5px 1px #000;
@@ -439,29 +482,40 @@ body {
       -ms-user-select: none;
           user-select: none;
 }
-/* line 19, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .carousel__control span {
   font-size: 35px;
   color: rgba(243, 235, 235, 0.8);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-/* line 23, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
-.block-carousel .carousel__control:hover span {
+/* line 29, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+.block-carousel .carousel__control span:hover {
   color: #fff;
   text-shadow: #000 0 0 15px;
 }
-/* line 28, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 35, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .carousel__control_prev {
   left: 0;
 }
-/* line 31, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 38, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .carousel__control_next {
   right: 0;
 }
-/* line 35, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 42, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .img-wrap {
   position: relative;
 }
-/* line 37, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 44, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .img-wrap .img-wrap__text-box {
   position: absolute;
   right: 0;
@@ -479,7 +533,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-/* line 49, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 56, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .img-wrap .img-wrap__text-box .img-wrap__title {
   color: #fff;
   border: solid 1px rgba(255, 255, 255, 0.5);
@@ -490,11 +544,11 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 61, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 68, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .block-carousel_main {
   margin-top: 45px;
 }
-/* line 65, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
+/* line 72, E:\projects\restaurant(BEM)\assets\less\blocks\_block-carousel.less */
 .block-carousel .block-carousel_margin-top {
   margin-top: 142px;
 }
@@ -511,13 +565,31 @@ body {
   right: 0;
   z-index: 2;
 }
-/* line 11, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 531px) {
+  /* line 11, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__header {
+    top: -250px;
+  }
+}
+/* line 15, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body {
   background-color: #f9f7f7;
   margin-top: 470px;
   position: relative;
 }
-/* line 15, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 767px) {
+  /* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body {
+    margin-top: 450px;
+  }
+}
+@media (max-width: 531px) {
+  /* line 24, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body {
+    margin-top: 300px;
+  }
+}
+/* line 27, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__image-box {
   width: 60%;
   margin: 40px auto 0 auto;
@@ -530,17 +602,42 @@ body {
   left: 0;
 }
 @media (max-width: 991px) {
-  /* line 26, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  /* line 38, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
   .block-about-us .block-about-us__body .block-about-us__image-box {
     width: 70%;
   }
 }
-/* line 29, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 850px) {
+  /* line 42, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__image-box {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 46, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__image-box {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 50, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__image-box {
+    top: -260px;
+    margin: 0 auto 0 auto;
+  }
+}
+@media (max-width: 531px) {
+  /* line 55, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__image-box {
+    top: -120px;
+  }
+}
+/* line 58, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__image-box img {
   width: 100%;
   max-width: 100%;
 }
-/* line 34, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+/* line 63, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box {
   padding: 250px 0 20px 0;
   display: -webkit-box;
@@ -553,15 +650,58 @@ body {
           align-items: center;
 }
 @media (max-width: 991px) {
-  /* line 41, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  /* line 70, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
   .block-about-us .block-about-us__body .block-about-us__text-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 240px 0 0 0;
   }
 }
-/* line 44, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 767px) {
+  /* line 75, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box {
+    padding: 250px 0 0 0;
+  }
+}
+@media (max-width: 690px) {
+  /* line 79, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box {
+    padding: 220px 0 0 0;
+  }
+}
+@media (max-width: 640px) {
+  /* line 83, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box {
+    padding: 160px 0 0 0;
+  }
+}
+@media (max-width: 550px) {
+  /* line 87, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box {
+    padding: 120px 0 0 0;
+  }
+}
+@media (max-width: 531px) {
+  /* line 91, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box {
+    padding: 240px 0 0 0;
+  }
+}
+@media (max-width: 420px) {
+  /* line 95, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box {
+    padding: 180px 0 0 0;
+  }
+}
+@media (max-width: 350px) {
+  /* line 99, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box {
+    padding: 140px 0 0 0;
+  }
+}
+/* line 102, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,7 +709,19 @@ body {
   height: 100%;
   padding: 0 50px;
 }
-/* line 49, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 991px) {
+  /* line 107, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 850px) {
+  /* line 111, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col {
+    padding: 0 30px;
+  }
+}
+/* line 115, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_left {
   width: 45%;
   -webkit-box-orient: vertical;
@@ -584,22 +736,40 @@ body {
           align-items: center;
 }
 @media (max-width: 991px) {
-  /* line 55, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  /* line 122, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
   .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_left {
     width: 80%;
   }
 }
-/* line 58, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 850px) {
+  /* line 126, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_left {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 130, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_left {
+    width: 100%;
+  }
+}
+/* line 133, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_left .block-about-us__icon-box_size_big {
   width: 200px;
   margin-bottom: 30px;
 }
-/* line 61, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 767px) {
+  /* line 137, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_left .block-about-us__icon-box_size_big {
+    width: 170px;
+  }
+}
+/* line 141, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_left .block-about-us__icon-box_size_big img {
   width: 100%;
   max-width: 100%;
 }
-/* line 67, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+/* line 147, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right {
   width: 55%;
   display: -webkit-box;
@@ -615,26 +785,54 @@ body {
       flex-wrap: wrap;
 }
 @media (max-width: 991px) {
-  /* line 74, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  /* line 155, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
   .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right {
     width: 80%;
   }
 }
-/* line 77, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 850px) {
+  /* line 159, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 163, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right {
+    width: 100%;
+  }
+}
+/* line 166, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right .block-about-us__info-wrap {
   width: 48%;
   height: 200px;
   margin: 15px 0;
 }
 @media (max-width: 991px) {
-  /* line 82, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  /* line 171, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
   .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right .block-about-us__info-wrap {
     width: 45%;
   }
 }
-/* line 85, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+@media (max-width: 767px) {
+  /* line 175, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right .block-about-us__info-wrap {
+    width: 100%;
+    height: 120px;
+    margin: 5px 0;
+  }
+}
+@media (max-width: 450px) {
+  /* line 181, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+  .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right .block-about-us__info-wrap {
+    height: 150px;
+    margin: 10px 0;
+  }
+}
+/* line 185, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right .block-about-us__info-wrap .info-wrap__header {
   height: 40px;
+  margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -644,24 +842,23 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 15px;
 }
-/* line 91, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+/* line 192, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__col_right .block-about-us__info-wrap .info-wrap__header .info-wrap__title {
   margin-left: 15px;
   font-size: 15px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
-/* line 100, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
+/* line 201, E:\projects\restaurant(BEM)\assets\less\blocks\_block-about-us.less */
 .block-about-us .block-about-us__body .block-about-us__text-box .block-about-us__text {
   color: #616161;
   font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.35;
   text-align: left;
   -ms-flex-item-align: start;
       align-self: start;
-  margin-bottom: 15px;
-  line-height: 1.35;
 }
 /* line 2, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid {
@@ -682,7 +879,14 @@ body {
     margin-top: 80px;
   }
 }
-/* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+@media (max-width: 767px) {
+  /* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid {
+    padding: 0 30px;
+    margin-top: 60px;
+  }
+}
+/* line 25, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area img {
   width: 100%;
   height: 100%;
@@ -691,81 +895,123 @@ body {
   -o-object-position: center;
      object-position: center;
 }
-/* line 27, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+/* line 32, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area .block-gallery__title {
   font-size: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 @media (max-width: 991px) {
-  /* line 32, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  /* line 37, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
   .block-gallery .block-gallery__grid .grid-area .block-gallery__title {
     font-size: 30px;
     letter-spacing: 1.8px;
     color: #222222;
   }
 }
-/* line 39, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+@media (max-width: 767px) {
+  /* line 43, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid .grid-area .block-gallery__title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 400px) {
+  /* line 47, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid .grid-area .block-gallery__title {
+    font-size: 19px;
+  }
+}
+/* line 52, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area_pos_1 {
   grid-area: 1 / 1 / 3 / 4;
   -ms-flex-item-align: center;
       align-self: center;
 }
 @media (max-width: 991px) {
-  /* line 43, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  /* line 56, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
   .block-gallery .block-gallery__grid .grid-area_pos_1 {
     grid-area: 1 / 1 / 1 / 13;
     padding-bottom: 20px;
   }
 }
-/* line 49, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+/* line 62, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area_pos_2 {
   grid-area: 1 / 4 / 3 / 9;
 }
 @media (max-width: 991px) {
-  /* line 52, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  /* line 65, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
   .block-gallery .block-gallery__grid .grid-area_pos_2 {
     grid-area: 2 / 1 / 3 / 7;
   }
 }
-/* line 57, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+@media (max-width: 767px) {
+  /* line 69, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid .grid-area_pos_2 {
+    grid-area: 2 / 1 / 3 / 13;
+  }
+}
+/* line 74, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area_pos_3 {
   grid-area: 1 / 9 / 3 / 13;
 }
 @media (max-width: 991px) {
-  /* line 60, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  /* line 77, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
   .block-gallery .block-gallery__grid .grid-area_pos_3 {
     grid-area: 2 / 7 / 3 / 13;
   }
 }
-/* line 65, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+@media (max-width: 767px) {
+  /* line 81, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid .grid-area_pos_3 {
+    grid-area: 3 / 1 / 3 / 13;
+  }
+}
+/* line 86, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area_pos_4 {
   grid-area: 3 / 1 / 7 / 9;
 }
 @media (max-width: 991px) {
-  /* line 68, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  /* line 89, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
   .block-gallery .block-gallery__grid .grid-area_pos_4 {
     grid-area: 3 / 1 / 5 / 13;
   }
 }
-/* line 73, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+@media (max-width: 767px) {
+  /* line 93, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid .grid-area_pos_4 {
+    grid-area: 4 / 1 / 5 / 13;
+  }
+}
+/* line 98, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area_pos_5 {
   grid-area: 3 / 9 / 5 / 13;
 }
 @media (max-width: 991px) {
-  /* line 76, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  /* line 101, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
   .block-gallery .block-gallery__grid .grid-area_pos_5 {
     grid-area: 5 / 1 / 7 / 7;
   }
 }
-/* line 81, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+@media (max-width: 767px) {
+  /* line 105, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid .grid-area_pos_5 {
+    grid-area: 5 / 1 / 6 / 13;
+  }
+}
+/* line 110, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
 .block-gallery .block-gallery__grid .grid-area_pos_6 {
   grid-area: 5 / 9 / 7 / 13;
 }
 @media (max-width: 991px) {
-  /* line 84, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  /* line 113, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
   .block-gallery .block-gallery__grid .grid-area_pos_6 {
     grid-area: 5 / 7 / 7 / 13;
+  }
+}
+@media (max-width: 767px) {
+  /* line 117, E:\projects\restaurant(BEM)\assets\less\blocks\_block-gallery.less */
+  .block-gallery .block-gallery__grid .grid-area_pos_6 {
+    grid-area: 6 / 1 / 7 / 13;
   }
 }
 /* line 2, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
@@ -793,13 +1039,20 @@ body {
     margin-top: 80px;
   }
 }
-/* line 15, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+@media (max-width: 767px) {
+  /* line 16, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+  .block-download .block-download__banner {
+    margin-top: 60px;
+    height: 280px;
+  }
+}
+/* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
 .block-download .block-download__banner .block-download__title {
   color: #fff;
   text-shadow: #000 1px 0 10px;
   margin: 30px 0;
 }
-/* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+/* line 25, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
 .block-download .block-download__banner .block-download__btn-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -808,8 +1061,18 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-/* line 23, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+@media (max-width: 500px) {
+  /* line 29, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+  .block-download .block-download__banner .block-download__btn-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/* line 32, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
 .block-download .block-download__banner .block-download__btn-wrap .block-download__btn {
+  font-size: 14px;
   color: #000;
   letter-spacing: 0.8px;
   background-color: #ffffff;
@@ -818,7 +1081,23 @@ body {
   border: 3px solid #d1a954;
   cursor: pointer;
 }
-/* line 31, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+@media (max-width: 767px) {
+  /* line 42, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+  .block-download .block-download__banner .block-download__btn-wrap .block-download__btn {
+    padding: 13px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+  /* line 47, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
+  .block-download .block-download__banner .block-download__btn-wrap .block-download__btn {
+    padding: 10px;
+    font-size: 12px;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+/* line 53, E:\projects\restaurant(BEM)\assets\less\blocks\_block-download.less */
 .block-download .block-download__banner .block-download__btn-wrap .block-download__btn:hover {
   color: #fff;
   background-color: #d1a954;
@@ -859,29 +1138,42 @@ body {
     padding: 0 40px;
   }
 }
-/* line 18, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+@media (max-width: 767px) {
+  /* line 19, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper {
+    margin-top: 60px;
+    padding: 0 30px;
+  }
+}
+/* line 23, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box {
   width: 60%;
 }
 @media (max-width: 1045px) {
-  /* line 20, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  /* line 26, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
   .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box {
     width: 80%;
   }
 }
-/* line 23, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+@media (max-width: 767px) {
+  /* line 30, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box {
+    width: 100%;
+  }
+}
+/* line 33, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__header {
   line-height: 1.35;
 }
-/* line 25, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 35, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__header .block-contact-us__title {
   margin-bottom: 20px;
 }
-/* line 28, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 38, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__header .block-contact-us__subtitle {
   color: #616161;
 }
-/* line 32, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 42, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -890,30 +1182,52 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/* line 35, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+@media (max-width: 767px) {
+  /* line 46, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/* line 49, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col {
   background-color: #ffffff;
   width: 48%;
   margin-top: 40px;
 }
 @media (max-width: 1045px) {
-  /* line 40, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  /* line 54, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
   .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col {
     width: 45%;
     margin-top: 40px;
   }
 }
-/* line 44, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+@media (max-width: 767px) {
+  /* line 59, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+/* line 63, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .contact-us-body-title {
   font-size: 18px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
-/* line 49, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 68, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list {
   margin-top: 30px;
 }
-/* line 51, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+@media (max-width: 767px) {
+  /* line 71, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list {
+    margin-top: 20px;
+  }
+}
+/* line 74, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list .block-contact-us__item {
   height: 60px;
   display: -webkit-box;
@@ -924,48 +1238,76 @@ body {
           align-items: center;
 }
 @media (max-width: 1045px) {
-  /* line 56, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  /* line 80, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
   .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list .block-contact-us__item {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
 }
-/* line 59, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+@media (max-width: 767px) {
+  /* line 84, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list .block-contact-us__item {
+    height: 50px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/* line 88, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list .block-contact-us__item .icon-wrap {
   font-size: 22px;
   width: 60px;
   color: #d1a954;
   text-align: center;
 }
-/* line 65, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 94, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list .block-contact-us__item .contact-us-body-text {
   width: 80%;
   line-height: 1.4;
 }
-/* line 69, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 98, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__info-box .block-contact-us__body .block-contact-us__body-col .block-contact-us__list .block-contact-us__item .contact-us-body-text_underline {
   text-decoration: underline;
 }
-/* line 78, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 107, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box {
   width: 35%;
 }
 @media (max-width: 1045px) {
-  /* line 81, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  /* line 110, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
   .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box {
     width: 60%;
     margin-top: 40px;
   }
 }
-/* line 85, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+@media (max-width: 767px) {
+  /* line 115, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box {
+    width: 70%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 650px) {
+  /* line 120, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 124, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box {
+    width: 100%;
+  }
+}
+/* line 127, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box .form-box__input {
   width: 100%;
   border-bottom: 1px solid #d0d0d0;
   padding: 10px 0;
   margin-bottom: 30px;
 }
-/* line 91, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 133, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box .form-box__textarea {
   width: 100%;
   height: 180px;
@@ -974,7 +1316,7 @@ body {
   margin-bottom: 30px;
   padding: 10px 15px;
 }
-/* line 99, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 141, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box .form-box__btn {
   width: 180px;
   color: #fff;
@@ -985,13 +1327,13 @@ body {
   text-transform: uppercase;
 }
 @media (max-width: 1045px) {
-  /* line 107, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+  /* line 150, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
   .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box .form-box__btn {
     margin: 0 auto;
     display: block;
   }
 }
-/* line 111, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 154, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box .form-box__btn:hover {
   background-color: #ffffff;
   color: #d1a954;
@@ -1000,7 +1342,7 @@ body {
   -webkit-transition: color 0.5s, border 0.5s, background-color 0.5s;
   transition: color 0.5s, border 0.5s, background-color 0.5s;
 }
-/* line 117, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
+/* line 160, E:\projects\restaurant(BEM)\assets\less\blocks\_block-contact-us.less */
 .block-contact-us .block-contact-us__wrapper .block-contact-us__form-box .form-box__btn:active {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1021,21 +1363,36 @@ body {
     padding-top: 80px;
   }
 }
-/* line 11, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
+@media (max-width: 767px) {
+  /* line 12, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
+  .block-our-inst .block-our-inst__wrap {
+    margin-top: 60px;
+    padding-top: 60px;
+  }
+}
+/* line 16, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
 .block-our-inst .block-our-inst__wrap .block-our-inst__header {
   text-align: center;
 }
-/* line 14, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
+/* line 19, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
 .block-our-inst .block-our-inst__wrap .block-our-inst__block-carousel {
   margin-top: 80px;
 }
-/* line 16, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
+@media (max-width: 767px) {
+  /* line 22, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
+  .block-our-inst .block-our-inst__wrap .block-our-inst__block-carousel {
+    margin-top: 60px;
+  }
+}
+/* line 25, E:\projects\restaurant(BEM)\assets\less\blocks\_block-our-inst.less */
 .block-our-inst .block-our-inst__wrap .block-our-inst__block-carousel .inst-carousel-control {
   height: 100%;
 }
 /* line 2, E:\projects\restaurant(BEM)\assets\less\blocks\_footer.less */
 .footer .footer__wrapper {
   height: 90px;
+  padding: 10px;
+  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1045,11 +1402,21 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-/* line 8, E:\projects\restaurant(BEM)\assets\less\blocks\_footer.less */
+@media (max-width: 767px) {
+  /* line 11, E:\projects\restaurant(BEM)\assets\less\blocks\_footer.less */
+  .footer .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    font-size: 13px;
+  }
+}
+/* line 15, E:\projects\restaurant(BEM)\assets\less\blocks\_footer.less */
 .footer .footer__wrapper .footer__social-networks {
   cursor: context-menu;
 }
-/* line 10, E:\projects\restaurant(BEM)\assets\less\blocks\_footer.less */
+/* line 17, E:\projects\restaurant(BEM)\assets\less\blocks\_footer.less */
 .footer .footer__wrapper .footer__social-networks a {
   color: #000;
 }

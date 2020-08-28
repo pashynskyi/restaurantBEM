@@ -8,11 +8,20 @@
       margin-top: 80px;
       padding-top: 80px;
     }
+    // Условие для экранов с шириной от 0 до @sm(767px)
+    @media (max-width: @sm) {
+      margin-top: 60px;
+      padding-top: 60px;
+    }
     .block-our-inst__header {
       text-align: center;
     }
     .block-our-inst__block-carousel {
       margin-top: 80px;
+      // Условие для экранов с шириной от 0 до @sm(767px)
+      @media (max-width: @sm) {
+        margin-top: 60px;
+      }
       .inst-carousel-control {
         height: 100%;
       }

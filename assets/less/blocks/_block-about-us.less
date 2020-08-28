@@ -7,13 +7,25 @@
     left: 0;
     right: 0;
     z-index: 2;
+    // Условие для экранов с шириной от 0 до 531px
+    @media (max-width: 531px) {
+      top: -250px;
+    }
   }
   .block-about-us__body {
     background-color: @secondaryBgColor;
     margin-top: 470px;
     position: relative;
+    // Условие для экранов с шириной от 0 до @sm(767px)
+    @media (max-width: @sm) {
+      margin-top: 450px;
+    }
+    // Условие для экранов с шириной от 0 до 531px
+    @media (max-width: 531px) {
+      margin-top: 300px;
+    }
     .block-about-us__image-box {
-      width: 60%; // !увеличить при уменьшении экрана
+      width: 60%;
       margin: 40px auto 0 auto;
       border: 10px solid #fff;
       box-shadow: 0 0 30px 0 rgba(126, 126, 126, 0.25);
@@ -25,6 +37,23 @@
       // Условие для экранов с шириной от 0 до @md(991px)
       @media (max-width: @md) {
         width: 70%;
+      }
+      // Условие для экранов с шириной от 0 до 850px
+      @media (max-width: 850px) {
+        width: 80%;
+      }
+      // Условие для экранов с шириной от 0 до @sm(767px)
+      @media (max-width: @sm) {
+        width: 90%;
+      }
+      // Условие для экранов с шириной от 0 до 600px
+      @media (max-width: 600px) {
+        top: -260px;
+        margin: 0 auto 0 auto;
+      }
+      // Условие для экранов с шириной от 0 до 531px
+      @media (max-width: 531px) {
+        top: -120px;
       }
       & img {
         width: 100%;
@@ -40,14 +69,52 @@
       // Условие для экранов с шириной от 0 до @md(991px)
       @media (max-width: @md) {
         flex-direction: column;
+        padding: 240px 0 0 0;
+      }
+      // Условие для экранов с шириной от 0 до @sm(767px)
+      @media (max-width: @sm) {
+        padding: 250px 0 0 0;
+      }
+      // Условие для экранов с шириной от 0 до 690px
+      @media (max-width: 690px) {
+        padding: 220px 0 0 0;
+      }
+      // Условие для экранов с шириной от 0 до 640px
+      @media (max-width: 640px) {
+        padding: 160px 0 0 0;
+      }
+      // Условие для экранов с шириной от 0 до 550px
+      @media (max-width: 550px) {
+        padding: 120px 0 0 0;
+      }
+      // Условие для экранов с шириной от 0 до 531px
+      @media (max-width: 531px) {
+        padding: 240px 0 0 0;
+      }
+      // Условие для экранов с шириной от 0 до 420px
+      @media (max-width: 420px) {
+        padding: 180px 0 0 0;
+      }
+      // Условие для экранов с шириной от 0 до 350px
+      @media (max-width: 350px) {
+        padding: 140px 0 0 0;
       }
       .block-about-us__col {
         display: flex;
         height: 100%;
         padding: 0 50px;
+        // Условие для экранов с шириной от 0 до @md(991px)
+        @media (max-width: @md) {
+          padding: 0 40px;
+        }
+        // Условие для экранов с шириной от 0 до 850px
+        @media (max-width: 850px) {
+          padding: 0 30px;
+        }
       }
       .block-about-us__col_left {
         width: 45%;
+
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -55,9 +122,22 @@
         @media (max-width: @md) {
           width: 80%;
         }
+        // Условие для экранов с шириной от 0 до 850px
+        @media (max-width: 850px) {
+          width: 90%;
+        }
+        // Условие для экранов с шириной от 0 до @sm(767px)
+        @media (max-width: @sm) {
+          width: 100%;
+        }
         .block-about-us__icon-box_size_big {
           width: 200px;
           margin-bottom: 30px;
+          // Условие для экранов с шириной от 0 до @sm(767px)
+          @media (max-width: @sm) {
+            width: 170px;
+          }
+
           & img {
             width: 100%;
             max-width: 100%;
@@ -66,6 +146,7 @@
       }
       .block-about-us__col_right {
         width: 55%;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -73,6 +154,14 @@
         // Условие для экранов с шириной от 0 до @md(991px)
         @media (max-width: @md) {
           width: 80%;
+        }
+        // Условие для экранов с шириной от 0 до 850px
+        @media (max-width: 850px) {
+          width: 90%;
+        }
+        // Условие для экранов с шириной от 0 до @sm(767px)
+        @media (max-width: @sm) {
+          width: 100%;
         }
         .block-about-us__info-wrap {
           width: 48%;
@@ -82,12 +171,24 @@
           @media (max-width: @md) {
             width: 45%;
           }
+          // Условие для экранов с шириной от 0 до @sm(767px)
+          @media (max-width: @sm) {
+            width: 100%;
+            height: 120px;
+            margin: 5px 0;
+          }
+          // Условие для экранов с шириной от 0 до 450px
+          @media (max-width: 450px) {
+            height: 150px;
+            margin: 10px 0;
+          }
           .info-wrap__header {
             height: 40px;
+            margin-bottom: 15px;
+
             display: flex;
             justify-content: left;
             align-items: flex-end;
-            margin-bottom: 15px;
             .info-wrap__title {
               margin-left: 15px;
               font-size: 15px;
@@ -100,10 +201,11 @@
       & .block-about-us__text {
         color: #616161;
         font-size: 14px;
-        text-align: left;
-        align-self: start;
         margin-bottom: 15px;
         line-height: 1.35;
+        
+        text-align: left;
+        align-self: start;
       }
     }
   }
