@@ -1018,7 +1018,7 @@ body {
 .block-download .block-download__banner {
   margin-top: 100px;
   height: 300px;
-  background: url("../img/picture1.webp") center / cover no-repeat;
+  background: url("img/picture1.webp") center / cover no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
