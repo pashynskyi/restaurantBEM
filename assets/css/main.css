@@ -243,19 +243,31 @@ body {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
-@media (max-width: 767px) {
+@media (orientation: landscape) {
   /* line 45, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  .header .header__wrapper .logo-wrap.logo-wrap_active {
+    left: 0;
+  }
+}
+@media (max-width: 767px) {
+  /* line 49, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .logo-wrap.logo-wrap_active {
     left: calc(50% - 65px);
   }
 }
-/* line 51, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+@media (max-width: 767px) and (orientation: landscape) {
+  /* line 52, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  .header .header__wrapper .logo-wrap.logo-wrap_active {
+    left: 0;
+  }
+}
+/* line 59, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger {
   display: none;
   cursor: pointer;
 }
 @media (max-width: 991px) {
-  /* line 55, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 63, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger {
     display: block;
     position: absolute;
@@ -264,7 +276,7 @@ body {
     height: 20px;
     z-index: 4;
   }
-  /* line 62, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 70, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger span {
     background-color: #000;
     position: absolute;
@@ -273,7 +285,7 @@ body {
     height: 2px;
     top: 9px;
   }
-  /* line 70, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 78, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger:before,
   .header .header__wrapper .header__burger:after {
     content: "";
@@ -283,7 +295,7 @@ body {
     height: 2px;
     left: 0;
   }
-  /* line 79, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 87, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger:before {
     top: 0;
     -webkit-transition: background-color 0.3s linear, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
@@ -291,7 +303,7 @@ body {
     transition: transform 0.2s ease-in, background-color 0.3s linear, top 0.2s linear 0.2s;
     transition: transform 0.2s ease-in, background-color 0.3s linear, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
   }
-  /* line 84, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 92, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .header__burger:after {
     bottom: 0;
     -webkit-transition: background-color 0.3s linear, bottom 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
@@ -300,11 +312,11 @@ body {
     transition: transform 0.2s ease-in, background-color 0.3s linear, bottom 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
   }
 }
-/* line 91, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 99, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger.header__burger_active span {
   background-color: transparent;
 }
-/* line 94, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 102, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger.header__burger_active:before {
   background-color: red;
   -webkit-transform: rotate(45deg);
@@ -315,7 +327,7 @@ body {
   transition: top 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s;
   transition: top 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
-/* line 101, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 109, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .header__burger.header__burger_active:after {
   background-color: red;
   -webkit-transform: rotate(-45deg);
@@ -326,7 +338,7 @@ body {
   transition: bottom 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s;
   transition: bottom 0.2s linear, background-color 0.3s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
-/* line 110, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 118, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list {
   position: relative;
   z-index: 3;
@@ -339,7 +351,7 @@ body {
   text-transform: uppercase;
 }
 @media (max-width: 991px) {
-  /* line 117, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 125, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list {
     position: fixed;
     top: -100%;
@@ -347,50 +359,69 @@ body {
     width: 100%;
     height: 100%;
     background-color: #fff;
+    opacity: 0;
     display: block;
     padding: 200px 25px 0 25px;
     text-align: center;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
-  /* line 129, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 147, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list.list_active {
     top: 0;
+    opacity: 1;
   }
 }
-/* line 133, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+@media (max-width: 991px) and (orientation: landscape) {
+  /* line 139, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  .header .header__wrapper .list {
+    padding: 25px 25px 25px 25px;
+    overflow: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/* line 152, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item {
   margin: 0px 10px;
 }
 @media (max-width: 991px) {
-  /* line 136, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 155, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item {
     margin: 20px 0px;
   }
 }
-/* line 139, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 158, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item:last-child {
   margin-right: 0;
 }
-/* line 142, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 161, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item:first-child .list__link {
   border: 1px solid #d1a954;
   padding: 10px;
   color: #d1a954;
 }
 @media (max-width: 991px) {
-  /* line 147, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 166, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item:first-child .list__link {
     border: none;
     padding: 0;
     color: #000;
   }
-  /* line 151, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 170, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item:first-child .list__link.list__link_active {
     color: #d1a954;
   }
 }
-/* line 156, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 175, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item:first-child:hover .list__link {
   color: #fff;
   background-color: #d1a954;
@@ -402,7 +433,7 @@ body {
   transition: background-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 @media (max-width: 991px) {
-  /* line 162, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 181, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item:first-child:hover .list__link {
     color: #d1a954;
     -webkit-box-shadow: none;
@@ -412,7 +443,7 @@ body {
     background-color: inherit;
   }
 }
-/* line 169, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 188, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item .list__link {
   font-size: 13px;
   color: #000;
@@ -421,7 +452,7 @@ body {
   width: 100%;
 }
 @media (max-width: 991px) {
-  /* line 176, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 195, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item .list__link {
     font-size: 15px;
   }
@@ -431,19 +462,19 @@ body {
   color: #d1a954;
   text-shadow: #ffcc00 1px 0 10px;
 }
-/* line 181, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 200, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header .header__wrapper .list .list__item .list__link_active {
   font-family: "Montserrat-Bold";
   font-size: 15px;
   color: #d1a954;
 }
 @media (max-width: 991px) {
-  /* line 186, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+  /* line 205, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
   .header .header__wrapper .list .list__item .list__link_active {
     font-size: 17px;
   }
 }
-/* line 193, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
+/* line 212, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header.header_sticky {
   position: fixed;
   top: 0;
