@@ -94,6 +94,17 @@ $(document).ready(function () {
       carousel.removeClass('block-carousel_margin-top');
     }
   }
+  // header_sticky for mobile
+  const lastScrollTop = 0;
+  $(window).scroll(function (event) {
+    const st = $(this).scrollTop();
+    if (st > lastScrollTop && $(window).scrollTop() > sticky.top) {
+      header.addClass('opacity_zero');
+    } else {
+      header.removeClass('opacity_zero');
+    }
+    lastScrollTop = st;
+  });
 
   // header__burger toggle state
 

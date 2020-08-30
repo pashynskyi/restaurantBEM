@@ -172,6 +172,12 @@ body {
   width: 100%;
   max-width: 100%;
 }
+@media (max-width: 991px) {
+  /* line 74, E:\projects\restaurant(BEM)\assets\less\_general.less */
+  .opacity_zero {
+    opacity: 0;
+  }
+}
 /* line 1, E:\projects\restaurant(BEM)\assets\less\blocks\_header.less */
 .header {
   position: relative;

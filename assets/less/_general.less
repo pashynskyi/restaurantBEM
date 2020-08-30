@@ -68,3 +68,10 @@ body {
   width: 100%;
   max-width: 100%;
 }
+
+.opacity_zero {
+  // Условие для экранов с шириной от 0 до @md(991px)
+  @media (max-width: @md) {
+    opacity: 0;
+  }
+}
