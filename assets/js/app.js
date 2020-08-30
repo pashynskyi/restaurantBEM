@@ -95,7 +95,7 @@ $(document).ready(function () {
     }
   }
   // header_sticky for mobile
-  const lastScrollTop = 0;
+  let lastScrollTop = 0;
   $(window).scroll(function (event) {
     const st = $(this).scrollTop();
     if (st > lastScrollTop && $(window).scrollTop() > sticky.top) {
